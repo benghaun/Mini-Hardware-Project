@@ -12,22 +12,11 @@ module mojo_top (
     output avr_rx,          // AVR RX (FPGA TX)
     input avr_rx_busy,      // AVR RX buffer full
     output io_led [3][8],   // LEDs on IO Shield
-    output io_seg [8],      // 7-segment LEDs on IO Shield
-    output io_sel [4],      // Digit select on IO Shield
-    input io_button [5],    // 5 buttons on IO Shield
-    input io_dip [3][8],     // DIP switches on IO Shield
     input s,
     input co,
     output a,
     output b,
     output ci //inputs to full adder
-    /*
-    input c,
-    input d,
-    input e,
-    output f,
-    output g
-    */
   ) {
   
   sig rst;                  // reset signal
@@ -38,7 +27,6 @@ module mojo_top (
     reset_conditioner reset_cond;
     .rst(rst){
     adderInput adderInput;
-    //oneBitAdder oneBitAdder; 
 
  
   }
@@ -49,13 +37,7 @@ module mojo_top (
     a = 0;
     b = 0;
     ci = 0;
-    /*
-    oneBitAdder.a = c;
-    oneBitAdder.b = d;
-    oneBitAdder.ci = e;
-    f = oneBitAdder.out[0];
-    g = oneBitAdder.out[1];
-    */
+    
     if (!adderInput.error){ //feed inputs into full adder circuit if not in error state
       a = adderInput.a;
       b = adderInput.b;
@@ -76,7 +58,6 @@ module mojo_top (
     avr_rx = bz;            // not using serial port
     
     
-    io_seg = 8hff;          // turn segments off
-    io_sel = 4hf;           // select no digits
+
   }
 }

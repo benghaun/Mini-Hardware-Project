@@ -1,0 +1,8 @@
+INTSTYLE=pa
+INFILE=D:\OneDrive - Singapore University of Technology and Design\work\SUTD\50.002 Computation Structures\Mojo\MiniHardwareProject\work\planAhead\MiniHardwareProject\MiniHardwareProject.runs\impl_1\mojo_top_0_routed.ncd
+OUTFILE=D:\OneDrive - Singapore University of Technology and Design\work\SUTD\50.002 Computation Structures\Mojo\MiniHardwareProject\work\planAhead\MiniHardwareProject\MiniHardwareProject.runs\impl_1\mojo_top_0.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=D:\OneDrive - Singapore University of Technology and Design\work\SUTD\50.002 Computation Structures\Mojo\MiniHardwareProject\work\planAhead\MiniHardwareProject\MiniHardwareProject.runs\impl_1
+LICENSE=WebPack
+USER_INFO=211405057_0_0_358
